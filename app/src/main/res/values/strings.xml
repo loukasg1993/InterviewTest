@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">InterviewTest</string>
+    <string name="sell_in">Sell In</string>
+    <string name="odds">Odds</string>
+</resources>
