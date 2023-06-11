@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">InterviewTest</string>
+
+    <!--    ResultAdapter-->
     <string name="sell_in">Sell In</string>
     <string name="odds">Odds</string>
+    <string name="name">Name</string>
 </resources>

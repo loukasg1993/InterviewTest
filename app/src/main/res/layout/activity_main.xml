@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.betsson.interviewteest.ui.MainViewModel" />
+            type="com.betsson.interviewteest.presentation.main.MainViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout

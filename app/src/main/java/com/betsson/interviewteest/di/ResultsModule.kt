@@ -1,7 +1,7 @@
 package com.betsson.interviewteest.di
 
 import com.betsson.interviewteest.api.Repository
-import com.betsson.interviewteest.ui.MainViewModel
+import com.betsson.interviewteest.presentation.main.MainViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

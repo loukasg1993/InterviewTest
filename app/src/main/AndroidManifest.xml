@@ -14,7 +14,7 @@
         android:theme="@style/Theme.KotlinProject"
         tools:targetApi="31" >
     <activity
-        android:name="com.betsson.interviewteest.ui.MainActivity"
+        android:name="com.betsson.interviewteest.presentation.main.MainActivity"
         android:exported="true"
         android:label="InterviewTest"
         android:configChanges="orientation|screenSize"
