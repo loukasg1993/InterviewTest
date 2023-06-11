@@ -5,6 +5,7 @@ import android.os.Parcelable
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.betsson.interviewteest.presentation.main.adapters.ResultAdapter
 import com.betsson.interviewtest.R
@@ -25,7 +26,10 @@ class MainActivity : AppCompatActivity(),  View.OnClickListener {
         initializeAdapter()
         setListeners()
         subscribeObservers()
-        fetchData()
+
+        if(savedInstanceState == null){
+            fetchData()
+        }
     }
     private fun initializeAdapter() {
         adapter = ResultAdapter(arrayListOf())
@@ -39,10 +43,10 @@ class MainActivity : AppCompatActivity(),  View.OnClickListener {
     }
 
     private fun subscribeObservers(){
-        viewModel.betResults.observe(this) { betResults ->
+        viewModel.betResults.observe(this, Observer {  betResults ->
             adapter.updateBetsList(betResults)
             binding.progressBar.visibility = View.GONE
-        }
+         })
 
         viewModel.errorMessage.observe(this) { errorMessage ->
             if (!errorMessage.isNullOrEmpty()) {
